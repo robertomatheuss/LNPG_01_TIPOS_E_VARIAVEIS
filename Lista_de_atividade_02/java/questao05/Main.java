@@ -7,16 +7,13 @@ public class Main{
         try(Scanner scan = new Scanner(System.in)) {
             //Entrada
             int indicaIndiceIpca =1;
-            while (indicaIndiceIpca < 99) {
+            while (indicaIndiceIpca < 21) {
                 System.out.println("Informe o mês o ano e o IPCA respectivo: [Informe na ordem]");           
                 String entrada = scan.nextLine().replace(',', '.'); 
                 String[] separada=entrada.split(" ");
                 if(entrada.equals("*"))
                     break;
                 for(int elemento=0;elemento< separada.length;elemento++){
-                    if(elemento == 1){
-                        ipcaLista[indicaIndiceIpca -1][elemento]=separada[elemento];    
-                    }
                     ipcaLista[indicaIndiceIpca -1][elemento]=separada[elemento];
                 }
                 indicaIndiceIpca++;

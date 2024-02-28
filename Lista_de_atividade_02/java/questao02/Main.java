@@ -22,7 +22,6 @@ public class Main {
                 }
                 dividendo +=2.0;
             }
-            System.out.println(somatoriaS);
             Double pi = Math.pow((somatoriaS*32),(0.333333));
             System.out.printf("O valor de pi é: %.5f", pi);
 

@@ -8,14 +8,15 @@ public class Main {
         String dataPassagem;
         String hasRG;
         String hasPassagem;
-        String[] assentos = {"A1","A2","A3","B1","B2","B3","C1","C2","C3"};
-
+        Integer assento = 1;
+        
         Scanner scan = new Scanner(System.in);  
-
-        System.out.println("A quantidade de passageiros suportada é 9");
+        
+        System.out.println("Qual é a quantidade de passageiros?");
+        Integer quantidadePassageiros = scan.nextInt();
         
         int i =0;
-        while(i < assentos.length){
+        while(i < quantidadePassageiros){
             System.out.println("Tem RG:[S/N]");
             hasRG = scan.next();
             if(hasRG.equals("N")||hasRG.equals("n")){
@@ -40,8 +41,9 @@ public class Main {
                 System.err.println("190");
                 break;
             }
-            System.out.println("O seu assento é "+ assentos[i]+ ", Tenha um bom dia!");
+            System.out.println("O seu assento é A"+ assento+ ", Tenha um bom dia!");
             i++;
+            assento++;
         }
     }
 }

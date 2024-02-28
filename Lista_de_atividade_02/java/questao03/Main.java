@@ -25,7 +25,7 @@ public class Main {
         }
         salarioComBonus = salario+bonus;
 
-        System.out.printf("O valor arrecado em vendas foi de: %.2f\n",faturamentoPessoal    );
+        System.out.printf("O valor arrecadado em vendas foi de: %.2f\n",faturamentoPessoal);
         System.out.printf("O valor ganho como bonus: %.2f\n",bonus);
         System.out.printf("O valor que recebera no mes é de: %.2f",salarioComBonus);
         
