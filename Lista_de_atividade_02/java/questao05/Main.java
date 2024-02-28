@@ -21,38 +21,37 @@ public class Main{
                 }
                 indicaIndiceIpca++;
             }        
-            //Saída
-            Double menorNumero = 10000.0;
-            String menoIpca = "";
-            String maiorIpca = "";
-            Double maiorNumero = 0.0;
-            Double soma = 0.0;
-            Double quantidade = 0.0;
-            for(String[] numeroIpca : ipcaLista){
-                for(int i =0;i< numeroIpca.length;i++){
-                    if(numeroIpca[i] == null)
-                        break;
-                    Double numero=Double.valueOf(numeroIpca[1]).doubleValue();
-                    if(numero<menorNumero){
-                        menorNumero = numero;
-                        menoIpca = numeroIpca[0];
-                    }
-                    if(numero>maiorNumero){
-                        maiorNumero = numero;
-                        maiorIpca = numeroIpca[0];
-                    }        
-                    quantidade++;
-                    soma += numero;           
-                }
-            }
-            System.out.printf("A média é: %.2f\n", soma/quantidade);
-            System.out.println("O menor ipca e seu respectivo mês foi: "+menorNumero+ " "+menoIpca);
-            System.out.println("O maior ipca e seu respectivo mês foi: "+maiorNumero+ " "+ maiorIpca);
-            
         } catch (Exception e) {
             System.out.println(e.getMessage());     
             e.printStackTrace();       
-  
+            
         }
+        //Saída
+        Double menorNumero = 10000.0;
+        String menoIpca = "";
+        String maiorIpca = "";
+        Double maiorNumero = 0.0;
+        Double soma = 0.0;
+        Double quantidade = 0.0;
+        for(String[] numeroIpca : ipcaLista){
+            for(int i =0;i< numeroIpca.length;i++){
+                if(numeroIpca[i] == null)
+                    break;
+                Double numero=Double.valueOf(numeroIpca[1]).doubleValue();
+                if(numero<menorNumero){
+                    menorNumero = numero;
+                    menoIpca = numeroIpca[0];
+                }
+                if(numero>maiorNumero){
+                    maiorNumero = numero;
+                    maiorIpca = numeroIpca[0];
+                }        
+                quantidade++;
+                soma += numero;           
+            }
+        }
+        System.out.printf("A média é: %.2f\n", soma/quantidade);
+        System.out.println("O menor ipca e seu respectivo mês foi: "+menorNumero+ " "+menoIpca);
+        System.out.println("O maior ipca e seu respectivo mês foi: "+maiorNumero+ " "+ maiorIpca);
     }
 }
